@@ -61,3 +61,14 @@ let myFunc2: funcType = (num, str) => {
 };
 myFunc2(23, "ddf", 23);
 // object alais
+type objectType = {
+  name: string;
+  age: number;
+  theme: "dark" | "light";
+};
+
+let myObject: objectType = {
+  name: "jack",
+  age: 32,
+  theme: "light",
+};
