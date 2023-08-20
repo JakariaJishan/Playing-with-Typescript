@@ -1,15 +1,63 @@
-import { Button } from "@mui/material";
-import { useState } from "react";
-import "./App.css";
+let myStr: string;
+myStr = "23";
 
-function App() {
-  const [count, setCount] = useState(0);
+let myNum: number;
+myNum = 23;
 
-  return (
-    <>
-      <Button variant="contained">Hello world</Button>
-    </>
-  );
-}
+let arr = ["jack", "john"];
+arr.push("string");
 
-export default App;
+let arrType: number[];
+arrType = [34, 23];
+
+let arrUnion: (number | string)[];
+arrUnion = ["jack", 32];
+
+let obj = {
+  name: "jack",
+  age: 23,
+};
+obj.age = 33;
+// obj.color = 'red'
+
+let objType: {
+  name: string;
+  age: number;
+  phone?: string;
+};
+
+objType = {
+  name: "jack",
+  age: 32,
+};
+
+let anyType: any[];
+anyType = [23, "jack", true];
+
+// functions
+
+let myFunc = (a: number, b: number): number => {
+  console.log("hello");
+  return a + b;
+};
+myFunc(23, 22);
+
+// type alias
+
+type UserType = {
+  name: string;
+  age: number;
+  phone?: string;
+};
+
+let getUser = (user: UserType) => {
+  console.log(user.name);
+};
+// function alias
+type funcType = (a: number, b: string, c?: number) => void;
+
+let myFunc2: funcType = (num, str) => {
+  console.log(num, str);
+};
+myFunc2(23, "ddf", 23);
+// object alais
