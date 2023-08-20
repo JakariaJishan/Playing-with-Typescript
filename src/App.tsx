@@ -95,3 +95,15 @@ let client: IUser = {
   email: "jack@gmail.com",
   age: 23,
 };
+// generics
+
+let addId = <T,>(obj: T): T => {
+  return { ...obj, id: 1 };
+};
+
+let data = {
+  name: "jack",
+  age: 23,
+};
+
+addId(data);
