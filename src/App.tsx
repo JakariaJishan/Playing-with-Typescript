@@ -72,3 +72,26 @@ let myObject: objectType = {
   age: 32,
   theme: "light",
 };
+
+// Interfaces
+interface IUser {
+  name: string;
+  email: string;
+  age: number;
+}
+
+interface IEmployee extends IUser {
+  employeeId: number;
+}
+
+let employee: IEmployee = {
+  name: "jack",
+  email: "jack@gmail.com",
+  age: 23,
+  employeeId: 1,
+};
+let client: IUser = {
+  name: "jack",
+  email: "jack@gmail.com",
+  age: 23,
+};
