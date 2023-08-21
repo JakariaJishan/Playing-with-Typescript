@@ -1,13 +1,21 @@
-interface IButtonProps {
-  title: string;
-  disabled: boolean;
-}
+type cardProps = {
+  names: {
+    first: string;
+    last: string;
+  }[];
+};
 
-const PostCard = ({ title, disabled }: IButtonProps) => {
+const PostCard = ({ names }: cardProps) => {
   return (
     <div>
-      <h1>{title}</h1>
-      <button disabled={disabled}>click me</button>
+      {names.map((name) => {
+        return (
+          <div key={name.first}>
+            <h1>{name.first}</h1>
+            <h3>{name.last}</h3>
+          </div>
+        );
+      })}
     </div>
   );
 };

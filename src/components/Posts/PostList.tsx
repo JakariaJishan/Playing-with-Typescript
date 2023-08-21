@@ -9,10 +9,21 @@ const PostList = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputVal(e.target.value);
   };
+
+  const names = [
+    {
+      first: "jack",
+      last: "joe",
+    },
+    {
+      first: "jonas",
+      last: "jessica",
+    },
+  ];
   return (
     <div>
       data
-      <PostCard title="this is title" disabled={true} />
+      <PostCard names={names} />
       <button onClick={() => setValue("failure")}>change status</button>
       <input value={inputVal} onChange={handleChange} />
       <p>{inputVal}</p>
