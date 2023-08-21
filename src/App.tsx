@@ -1,74 +1,14 @@
-let myStr: string;
-myStr = "23";
+import Auth from "./components/Posts/Auth";
+import PostList from "./components/Posts/PostList";
 
-let myNum: number;
-myNum = 23;
-
-let arr = ["jack", "john"];
-arr.push("string");
-
-let arrType: number[];
-arrType = [34, 23];
-
-let arrUnion: (number | string)[];
-arrUnion = ["jack", 32];
-
-let obj = {
-  name: "jack",
-  age: 23,
-};
-obj.age = 33;
-// obj.color = 'red'
-
-let objType: {
-  name: string;
-  age: number;
-  phone?: string;
+const App = () => {
+  return (
+    <div>
+      App
+      <PostList />
+      <Auth />
+    </div>
+  );
 };
 
-objType = {
-  name: "jack",
-  age: 32,
-};
-
-let anyType: any[];
-anyType = [23, "jack", true];
-
-// functions
-
-let myFunc = (a: number, b: number): number => {
-  console.log("hello");
-  return a + b;
-};
-myFunc(23, 22);
-
-// type alias
-
-type UserType = {
-  name: string;
-  age: number;
-  phone?: string;
-};
-
-let getUser = (user: UserType) => {
-  console.log(user.name);
-};
-// function alias
-type funcType = (a: number, b: string, c?: number) => void;
-
-let myFunc2: funcType = (num, str) => {
-  console.log(num, str);
-};
-myFunc2(23, "ddf", 23);
-// object alais
-type objectType = {
-  name: string;
-  age: number;
-  theme: "dark" | "light";
-};
-
-let myObject: objectType = {
-  name: "jack",
-  age: 32,
-  theme: "light",
-};
+export default App;
