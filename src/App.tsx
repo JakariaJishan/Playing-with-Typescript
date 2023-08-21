@@ -1,3 +1,4 @@
+import Auth from "./components/Posts/Auth";
 import PostList from "./components/Posts/PostList";
 
 const App = () => {
@@ -5,6 +6,7 @@ const App = () => {
     <div>
       App
       <PostList />
+      <Auth />
     </div>
   );
 };
