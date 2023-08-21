@@ -3,9 +3,10 @@ type cardProps = {
     first: string;
     last: string;
   }[];
+  handleButton: (e: React.MouseEvent<HTMLButtonElement>, id: number) => void;
 };
 
-const PostCard = ({ names }: cardProps) => {
+const PostCard = ({ names, handleButton }: cardProps) => {
   return (
     <div>
       {names.map((name) => {
@@ -16,6 +17,7 @@ const PostCard = ({ names }: cardProps) => {
           </div>
         );
       })}
+      <button onClick={(e) => handleButton(e, 1)}>Clickx me</button>
     </div>
   );
 };

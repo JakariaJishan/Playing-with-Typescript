@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PostCard from "./PostCard";
-import Children from "./childern";
 const PostList = () => {
   type status = "success" | "pending" | "failure";
   const [value, setValue] = useState<status>("success");
@@ -23,10 +22,14 @@ const PostList = () => {
   return (
     <div>
       data
-      <Children>
-        <PostCard names={names} />
-      </Children>
+      <PostCard
+        names={names}
+        handleButton={(e, id) => {
+          console.log("click", e, id);
+        }}
+      />
       <button onClick={() => setValue("failure")}>change status</button>
+      <p>{value}</p>
       <input value={inputVal} onChange={handleChange} />
       <p>{inputVal}</p>
     </div>
