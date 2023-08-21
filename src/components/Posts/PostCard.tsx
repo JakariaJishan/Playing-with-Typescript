@@ -1,9 +1,13 @@
-const PostCard = (props: { id: number; title: string; body: string }) => {
+interface IButtonProps {
+  title: string;
+  disabled: boolean;
+}
+
+const PostCard = ({ title, disabled }: IButtonProps) => {
   return (
     <div>
-      PostCard
-      {props.title}
-      {props.body}
+      <h1>{title}</h1>
+      <button disabled={disabled}>click me</button>
     </div>
   );
 };
